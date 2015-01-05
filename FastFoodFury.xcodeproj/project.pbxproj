@@ -17,8 +17,8 @@
 		940316781A5AE40D0091CA1B /* Sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 940316771A5AE40D0091CA1B /* Sprites.atlas */; };
 		9403167A1A5AFA0C0091CA1B /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940316791A5AFA0C0091CA1B /* Food.swift */; };
 		9403167C1A5AFC0F0091CA1B /* Array2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9403167B1A5AFC0F0091CA1B /* Array2D.swift */; };
-		9403167E1A5AFD260091CA1B /* Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9403167D1A5AFD260091CA1B /* Set.swift */; };
 		940316801A5AFD730091CA1B /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9403167F1A5AFD730091CA1B /* Level.swift */; };
+		940316821A5B07D50091CA1B /* Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940316811A5B07D50091CA1B /* Set.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,8 +46,8 @@
 		940316771A5AE40D0091CA1B /* Sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Sprites.atlas; sourceTree = "<group>"; };
 		940316791A5AFA0C0091CA1B /* Food.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		9403167B1A5AFC0F0091CA1B /* Array2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array2D.swift; sourceTree = "<group>"; };
-		9403167D1A5AFD260091CA1B /* Set.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Set.swift; path = ../Set.swift; sourceTree = "<group>"; };
 		9403167F1A5AFD730091CA1B /* Level.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
+		940316811A5B07D50091CA1B /* Set.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Set.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +100,7 @@
 				940316601A5AE3A70091CA1B /* LaunchScreen.xib */,
 				940316511A5AE3A70091CA1B /* Supporting Files */,
 				9403167B1A5AFC0F0091CA1B /* Array2D.swift */,
-				9403167D1A5AFD260091CA1B /* Set.swift */,
+				940316811A5B07D50091CA1B /* Set.swift */,
 			);
 			path = FastFoodFury;
 			sourceTree = "<group>";
@@ -231,10 +231,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				940316821A5B07D50091CA1B /* Set.swift in Sources */,
 				940316581A5AE3A70091CA1B /* GameScene.swift in Sources */,
 				940316801A5AFD730091CA1B /* Level.swift in Sources */,
 				9403167A1A5AFA0C0091CA1B /* Food.swift in Sources */,
-				9403167E1A5AFD260091CA1B /* Set.swift in Sources */,
 				9403165A1A5AE3A70091CA1B /* GameViewController.swift in Sources */,
 				940316541A5AE3A70091CA1B /* AppDelegate.swift in Sources */,
 				9403167C1A5AFC0F0091CA1B /* Array2D.swift in Sources */,

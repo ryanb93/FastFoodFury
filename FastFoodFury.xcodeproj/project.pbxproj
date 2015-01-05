@@ -19,6 +19,7 @@
 		9403167C1A5AFC0F0091CA1B /* Array2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9403167B1A5AFC0F0091CA1B /* Array2D.swift */; };
 		940316801A5AFD730091CA1B /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9403167F1A5AFD730091CA1B /* Level.swift */; };
 		940316821A5B07D50091CA1B /* Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940316811A5B07D50091CA1B /* Set.swift */; };
+		940316841A5B09AE0091CA1B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940316831A5B09AE0091CA1B /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		9403167B1A5AFC0F0091CA1B /* Array2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array2D.swift; sourceTree = "<group>"; };
 		9403167F1A5AFD730091CA1B /* Level.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		940316811A5B07D50091CA1B /* Set.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Set.swift; sourceTree = "<group>"; };
+		940316831A5B09AE0091CA1B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				940316601A5AE3A70091CA1B /* LaunchScreen.xib */,
 				940316511A5AE3A70091CA1B /* Supporting Files */,
 				9403167B1A5AFC0F0091CA1B /* Array2D.swift */,
+				940316831A5B09AE0091CA1B /* Constants.swift */,
 				940316811A5B07D50091CA1B /* Set.swift */,
 			);
 			path = FastFoodFury;
@@ -238,6 +241,7 @@
 				9403165A1A5AE3A70091CA1B /* GameViewController.swift in Sources */,
 				940316541A5AE3A70091CA1B /* AppDelegate.swift in Sources */,
 				9403167C1A5AFC0F0091CA1B /* Array2D.swift in Sources */,
+				940316841A5B09AE0091CA1B /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +367,7 @@
 				INFOPLIST_FILE = FastFoodFury/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -373,6 +378,7 @@
 				INFOPLIST_FILE = FastFoodFury/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

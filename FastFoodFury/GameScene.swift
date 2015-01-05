@@ -12,8 +12,8 @@ class GameScene: SKScene {
     
     var level: Level!
     
-    let TileWidth: CGFloat = 32.0
-    let TileHeight: CGFloat = 36.0
+    let TileWidth: CGFloat = 42.0
+    let TileHeight: CGFloat = 46.0
     
     let gameLayer = SKNode()
     let foodLayer = SKNode()
@@ -23,15 +23,12 @@ class GameScene: SKScene {
         fatalError("init(coder) is not used in this app")
     }
     
-
     override init(size: CGSize) {
         super.init(size: size)
         
         anchorPoint = CGPoint(x: 0.5, y: 0.5)
         
-        let background = SKSpriteNode(imageNamed: "Background")
-        addChild(background)
-        
+        gameLayer.zPosition = Layer.Game
         addChild(gameLayer)
         
         let layerPosition = CGPoint(
@@ -39,8 +36,16 @@ class GameScene: SKScene {
             y: -TileHeight * CGFloat(NumRows) / 2)
         
         foodLayer.position = layerPosition
+        foodLayer.zPosition = Layer.Food
         gameLayer.addChild(foodLayer)
         
+    }
+    
+    override func didMoveToView(view: SKView) {
+        let background = SKSpriteNode(imageNamed: "Background")
+        background.zPosition = Layer.Background
+        background.size = CGSize(width: self.view!.bounds.size.width, height:self.view!.bounds.size.height)
+        addChild(background)
     }
     
     func addSpritesForFoods(foods: Set<Food>) {

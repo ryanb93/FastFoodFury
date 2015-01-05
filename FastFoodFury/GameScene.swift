@@ -12,12 +12,12 @@ class GameScene: SKScene {
     
     var level: Level!
     
-    let TileWidth: CGFloat = 42.0
-    let TileHeight: CGFloat = 46.0
+    var TileWidth: CGFloat!
+    var TileHeight: CGFloat!
     
     let gameLayer = SKNode()
     let foodLayer = SKNode()
-    
+    let tilesLayer = SKNode()
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder) is not used in this app")
@@ -31,6 +31,16 @@ class GameScene: SKScene {
         gameLayer.zPosition = Layer.Game
         addChild(gameLayer)
         
+    }
+    
+    override func didMoveToView(view: SKView) {
+        
+        let viewWidth = self.view!.bounds.size.width;
+        let viewHeight = self.view!.bounds.size.height;
+        
+        TileWidth = CGFloat(viewWidth - 40) / CGFloat(NumColumns)
+        TileHeight = TileWidth + 5
+        
         let layerPosition = CGPoint(
             x: -TileWidth * CGFloat(NumColumns) / 2,
             y: -TileHeight * CGFloat(NumRows) / 2)
@@ -39,12 +49,14 @@ class GameScene: SKScene {
         foodLayer.zPosition = Layer.Food
         gameLayer.addChild(foodLayer)
         
-    }
-    
-    override func didMoveToView(view: SKView) {
+        tilesLayer.position = layerPosition
+        tilesLayer.zPosition = Layer.Tiles
+        gameLayer.addChild(tilesLayer)
+
+        
         let background = SKSpriteNode(imageNamed: "Background")
         background.zPosition = Layer.Background
-        background.size = CGSize(width: self.view!.bounds.size.width, height:self.view!.bounds.size.height)
+        background.size = CGSize(width: viewWidth, height:viewHeight)
         addChild(background)
     }
     
@@ -53,8 +65,22 @@ class GameScene: SKScene {
         for food in foods {
             let sprite = SKSpriteNode(imageNamed: food.foodType.spriteName)
             sprite.position = pointForColumn(food.column, row: food.row)
+            sprite.size = CGSize(width: TileWidth - 3, height: TileHeight - 3)
             foodLayer.addChild(sprite)
             food.sprite = sprite
+        }
+    }
+    
+    func addTiles() {
+        for row in 0..<NumRows {
+            for column in 0..<NumColumns {
+                if let tile = level.tileAtColumn(column, row: row) {
+                    let tileNode = SKSpriteNode(imageNamed: "Tile")
+                    tileNode.position = pointForColumn(column, row: row)
+                    tileNode.size = CGSize(width: TileWidth, height: TileHeight)
+                    tilesLayer.addChild(tileNode)
+                }
+            }
         }
     }
     

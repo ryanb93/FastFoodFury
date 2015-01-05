@@ -14,5 +14,6 @@ import UIKit
 struct Layer {
     static let Background:CGFloat = 0
     static let Game: CGFloat = 1
-    static let Food: CGFloat = 2
+    static let Tiles: CGFloat = 2
+    static let Food: CGFloat = 3
 }

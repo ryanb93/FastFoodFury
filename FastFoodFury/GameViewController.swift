@@ -31,6 +31,8 @@ class GameViewController: UIViewController {
         
         //Show the scene.
         skView.presentScene(scene)
+
+        scene.addTiles()
         
         //Begin the game
         beginGame()

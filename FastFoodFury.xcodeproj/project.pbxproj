@@ -8,13 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		940316541A5AE3A70091CA1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940316531A5AE3A70091CA1B /* AppDelegate.swift */; };
-		940316561A5AE3A70091CA1B /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 940316551A5AE3A70091CA1B /* GameScene.sks */; };
 		940316581A5AE3A70091CA1B /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940316571A5AE3A70091CA1B /* GameScene.swift */; };
 		9403165A1A5AE3A70091CA1B /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940316591A5AE3A70091CA1B /* GameViewController.swift */; };
 		9403165D1A5AE3A70091CA1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9403165B1A5AE3A70091CA1B /* Main.storyboard */; };
 		9403165F1A5AE3A70091CA1B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9403165E1A5AE3A70091CA1B /* Images.xcassets */; };
 		940316621A5AE3A70091CA1B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 940316601A5AE3A70091CA1B /* LaunchScreen.xib */; };
 		9403166E1A5AE3A70091CA1B /* FastFoodFuryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9403166D1A5AE3A70091CA1B /* FastFoodFuryTests.swift */; };
+		940316781A5AE40D0091CA1B /* Sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 940316771A5AE40D0091CA1B /* Sprites.atlas */; };
+		9403167A1A5AFA0C0091CA1B /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940316791A5AFA0C0091CA1B /* Food.swift */; };
+		9403167C1A5AFC0F0091CA1B /* Array2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9403167B1A5AFC0F0091CA1B /* Array2D.swift */; };
+		9403167E1A5AFD260091CA1B /* Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9403167D1A5AFD260091CA1B /* Set.swift */; };
+		940316801A5AFD730091CA1B /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9403167F1A5AFD730091CA1B /* Level.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +35,6 @@
 		9403164E1A5AE3A70091CA1B /* FastFoodFury.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FastFoodFury.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		940316521A5AE3A70091CA1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		940316531A5AE3A70091CA1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		940316551A5AE3A70091CA1B /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		940316571A5AE3A70091CA1B /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		940316591A5AE3A70091CA1B /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		9403165C1A5AE3A70091CA1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -40,6 +43,11 @@
 		940316671A5AE3A70091CA1B /* FastFoodFuryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FastFoodFuryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9403166C1A5AE3A70091CA1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9403166D1A5AE3A70091CA1B /* FastFoodFuryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastFoodFuryTests.swift; sourceTree = "<group>"; };
+		940316771A5AE40D0091CA1B /* Sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Sprites.atlas; sourceTree = "<group>"; };
+		940316791A5AFA0C0091CA1B /* Food.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		9403167B1A5AFC0F0091CA1B /* Array2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array2D.swift; sourceTree = "<group>"; };
+		9403167D1A5AFD260091CA1B /* Set.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Set.swift; path = ../Set.swift; sourceTree = "<group>"; };
+		9403167F1A5AFD730091CA1B /* Level.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,13 +90,17 @@
 			isa = PBXGroup;
 			children = (
 				940316531A5AE3A70091CA1B /* AppDelegate.swift */,
-				940316551A5AE3A70091CA1B /* GameScene.sks */,
 				940316571A5AE3A70091CA1B /* GameScene.swift */,
 				940316591A5AE3A70091CA1B /* GameViewController.swift */,
+				940316791A5AFA0C0091CA1B /* Food.swift */,
+				9403167F1A5AFD730091CA1B /* Level.swift */,
 				9403165B1A5AE3A70091CA1B /* Main.storyboard */,
 				9403165E1A5AE3A70091CA1B /* Images.xcassets */,
+				940316771A5AE40D0091CA1B /* Sprites.atlas */,
 				940316601A5AE3A70091CA1B /* LaunchScreen.xib */,
 				940316511A5AE3A70091CA1B /* Supporting Files */,
+				9403167B1A5AFC0F0091CA1B /* Array2D.swift */,
+				9403167D1A5AFD260091CA1B /* Set.swift */,
 			);
 			path = FastFoodFury;
 			sourceTree = "<group>";
@@ -200,8 +212,8 @@
 			files = (
 				940316621A5AE3A70091CA1B /* LaunchScreen.xib in Resources */,
 				9403165F1A5AE3A70091CA1B /* Images.xcassets in Resources */,
-				940316561A5AE3A70091CA1B /* GameScene.sks in Resources */,
 				9403165D1A5AE3A70091CA1B /* Main.storyboard in Resources */,
+				940316781A5AE40D0091CA1B /* Sprites.atlas in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,8 +232,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				940316581A5AE3A70091CA1B /* GameScene.swift in Sources */,
+				940316801A5AFD730091CA1B /* Level.swift in Sources */,
+				9403167A1A5AFA0C0091CA1B /* Food.swift in Sources */,
+				9403167E1A5AFD260091CA1B /* Set.swift in Sources */,
 				9403165A1A5AE3A70091CA1B /* GameViewController.swift in Sources */,
 				940316541A5AE3A70091CA1B /* AppDelegate.swift in Sources */,
+				9403167C1A5AFC0F0091CA1B /* Array2D.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,11 +14,34 @@ let NumRows = 9
 class Level {
     
     private var foods = Array2D<Food>(columns: NumColumns, rows: NumRows)
+    private var tiles = Array2D<Tile>(columns: NumColumns, rows: NumRows)
+    
+    init(fileName: String) {
+        if let dictionary = Dictionary<String, AnyObject>.loadJSONFromBundle(fileName) {
+            if let tilesArray: AnyObject = dictionary["tiles"] {
+                for(row, rowArray) in enumerate(tilesArray as [[Int]]) {
+                    let tileRow = NumRows - row - 1
+                    for(column, value) in enumerate(rowArray) {
+                        println(value)
+                        if value == 1 {
+                            tiles[column, tileRow] = Tile()
+                        }
+                    }
+                }
+            }
+        }
+    }
     
     func foodAtColumn(column: Int, row: Int) -> Food? {
         assert(column >= 0 && column < NumColumns)
         assert(row >= 0 && row < NumRows)
         return foods[column, row]
+    }
+    
+    func tileAtColumn(column: Int, row: Int) -> Tile? {
+        assert(column >= 0 && column < NumColumns)
+        assert(row >= 0 && row < NumRows)
+        return tiles[column, row]
     }
     
     func shuffle() -> Set<Food> {
@@ -31,15 +54,15 @@ class Level {
         
         for row in 0..<NumRows {
             for column in 0..<NumColumns {
-                var foodType = FoodType.random()
-                let food = Food(column: column, row: row, foodType: foodType)
-                foods[column, row] = food
-                set.addElement(food)
+                if tiles[column, row] != nil {
+                    var foodType = FoodType.random()
+                    let food = Food(column: column, row: row, foodType: foodType)
+                    foods[column, row] = food
+                    set.addElement(food)
+                }
             }
         }
-        
         return set
-        
     }
     
 }

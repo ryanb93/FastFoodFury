@@ -28,6 +28,7 @@ class GameViewController: UIViewController {
         //Create the level
         level = Level(fileName: "Level_1")
         scene.level = level
+        scene.swipeHandler = handleSwipe
         
         //Show the scene.
         skView.presentScene(scene)
@@ -59,4 +60,15 @@ class GameViewController: UIViewController {
         let newFoods = level.shuffle()
         scene.addSpritesForFoods(newFoods)
     }
+    
+    func handleSwipe(swap: Swap) {
+        view.userInteractionEnabled = false
+        
+        level.performSwap(swap)
+        
+        scene.animateSwap(swap) {
+            self.view.userInteractionEnabled = true
+        }
+    }
+
 }

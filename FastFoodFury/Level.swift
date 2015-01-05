@@ -48,6 +48,21 @@ class Level {
         return createInitialFoods()
     }
     
+    func performSwap(swap: Swap) {
+        let columnA = swap.foodA.column
+        let rowA = swap.foodA.row
+        let columnB = swap.foodB.column
+        let rowB = swap.foodB.row
+        
+        foods[columnA, rowA] = swap.foodB
+        swap.foodB.column = columnA
+        swap.foodB.row = rowA
+        
+        foods[columnB, rowB] = swap.foodA
+        swap.foodA.column = columnB
+        swap.foodA.row = rowB
+    }
+    
     private func createInitialFoods() -> Set<Food> {
         
         var set = Set<Food>()

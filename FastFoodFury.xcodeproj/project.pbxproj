@@ -27,6 +27,7 @@
 		940316931A5B19940091CA1B /* Level_2.json in Resources */ = {isa = PBXBuildFile; fileRef = 9403168E1A5B19940091CA1B /* Level_2.json */; };
 		940316941A5B19940091CA1B /* Level_3.json in Resources */ = {isa = PBXBuildFile; fileRef = 9403168F1A5B19940091CA1B /* Level_3.json */; };
 		940316951A5B19940091CA1B /* Level_4.json in Resources */ = {isa = PBXBuildFile; fileRef = 940316901A5B19940091CA1B /* Level_4.json */; };
+		940316971A5B26950091CA1B /* Swap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940316961A5B26950091CA1B /* Swap.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		9403168E1A5B19940091CA1B /* Level_2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Level_2.json; sourceTree = "<group>"; };
 		9403168F1A5B19940091CA1B /* Level_3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Level_3.json; sourceTree = "<group>"; };
 		940316901A5B19940091CA1B /* Level_4.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Level_4.json; sourceTree = "<group>"; };
+		940316961A5B26950091CA1B /* Swap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Swap.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				940316571A5AE3A70091CA1B /* GameScene.swift */,
 				940316591A5AE3A70091CA1B /* GameViewController.swift */,
 				940316791A5AFA0C0091CA1B /* Food.swift */,
+				940316961A5B26950091CA1B /* Swap.swift */,
 				940316871A5B0E9D0091CA1B /* Tile.swift */,
 				9403167F1A5AFD730091CA1B /* Level.swift */,
 				9403165B1A5AE3A70091CA1B /* Main.storyboard */,
@@ -269,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				940316821A5B07D50091CA1B /* Set.swift in Sources */,
+				940316971A5B26950091CA1B /* Swap.swift in Sources */,
 				940316581A5AE3A70091CA1B /* GameScene.swift in Sources */,
 				940316801A5AFD730091CA1B /* Level.swift in Sources */,
 				9403167A1A5AFA0C0091CA1B /* Food.swift in Sources */,
